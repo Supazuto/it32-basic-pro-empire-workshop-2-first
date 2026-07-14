@@ -1,28 +1,46 @@
-name = input("name : ") 
+name = input("name : ")
 age = int(input("age :  "))
-if age >= 20:
-    print("PASSED")
-    height = float(input("height(cm) : "))
-    if height >= 150:
-        print("PASSED")
-        power = int(input("power : "))
-        if power >= 5:
-            print("PASSED")
-            collect = float(input("collect : "))
-            if collect >= 5:
-                print("PASSED")
-                
-                print("Congratulation, Welcome to ours team!!")
-                print(f'Mr/Mrs.{name} || Age {age} years old || height {height} cm || power {power} || money {collect}')
-            else:
-                print("Too Poor")
-        else:
-            print("Too Weak")
-    else:
-        print("Too SHORT")
+height = float(input("height(cm) : "))
+power = int(input("power : "))
+collect = float(input("collect : "))
+
+
+rich = 0
+old = 0
+strong = 0
+tall = 0
+
+if  age >= 20:
+    old = 1
 else:
-    print("Too young")
+    old = 0
 
+if height >= 150:
+    tall = 1
+else:
+    tall = 0
 
+if power >= 5:
+    strong = 1
+else:
+    strong = 0
 
+if collect >= 5:
+    rich = 1
+else:
+    rich = 0
 
+print("////////////////////////////////////////////////////////////////////////////////")
+print("Congratulations!, you join our team!")
+print(f'Mr/Mrs.{name} || Age {age} years old || height {height} cm || power {power} || money {collect}')
+
+if rich == 1 and old == 1 and strong == 1 and tall == 1:
+    print("you are THE HEAD of our team")
+elif rich == 1 and old == 0 and strong == 0 and tall == 0:
+    print("you just a rich one")
+elif rich == 0 and old == 0 and strong == 0 and tall == 0:
+    print("i'll not let you join our team, it's to risk")
+else:
+    print("you are our members")
+
+print("////////////////////////////////////////////////////////////////////////////////")
